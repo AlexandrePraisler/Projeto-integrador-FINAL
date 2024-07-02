@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FORM.CSS">
+    <title>Formulário</title>
+</head>
+<body>
+    <div>
+        <h1 id="titulo">Cadastro de T.S.T</h1>
+        <p id="subtitulo">Complete suas informações</p>
+        <br>
+    </div>
+    
+    <form action="cadastra_tst.php" method="POST" >
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome"><strong>Nome:</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome:</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+            </div>
+        </fieldset> 
+        <div class="campo">
+            <label for="sexo"><strong>Sexo:</strong></label>
+            <select id="sexo" required>
+              <option selected disabled value="">Selecione</option>
+              <option>Masculino</option>
+              <option>Feminino</option>
+              <option>Não declarar</option>
+            </select>
+        </div>
+        
+        <div class="campo">
+            <label for="email"><strong>Email:</strong></label>
+            <input type="email" name="email" id="email" required><br>
+            <label for="email"><strong>Perfil do LinkedIn:</strong></label>
+            <input type="link" name="LinkedIn" id="link" required>
+        </div>
+        <div class="campo">
+            <label><strong>Qual nível é sua formação?</strong></label>
+            <label>
+                <input  name="carreira" value="Técnico" type="radio" checked>Técnico
+            </label>
+            <label>
+                <input  name="carreira" value="Tecnólogo" type="radio">Tecnólogo
+            </label>
+            <label>
+                <input  name="carreira" value="Engenheiro" type="radio">Engenheiro
+        </div>
+        <div class="campo">
+            <label for="senioridade"><strong>Senioridade</strong></label>
+            <select id="senioridade" name="senioridade" required>
+              <option selected disabled value="">Selecione</option>
+              <option value="Junior">Júnior</option>
+              <option value="Pleno">Pleno</option>
+              <option value="Sênior">Sênior</option>
+            </select>
+        </div>
+
+
+        <fieldset class="grupo">
+            <div id="check">
+                <label><strong>Selecione as NRs em que voce se especializou:</strong></label><br><br>
+                <input type="checkbox" id="norma1" name="norma1" value="nr06">
+                <label for="norma1"> NR.º6</label>
+                <input type="checkbox" id="norma2" name="norma2" value="nr10">
+                <label for="norma2"> NR.º10</label>
+                <input type="checkbox" id="norma3" name="norma3" value="nr12">
+                <label for="norma3"> NR.º12</label>
+                <input type="checkbox" id="norma4" name="norma4" value="nr15">
+                <label for="norma4"> NR.º15</label>
+                <input type="checkbox" id="norma5" name="norma5" value="nr18">
+                <label for="norma5"> NR.º18</label>
+                <input type="checkbox" id="norma6" name="norma6" value="nr33">
+                <label for="norma6"> NR.º33</label>
+                <input type="checkbox" id="norma7" name="norma7" value="nr35">
+                <label for="norma7"> NR.º35</label>
+            </div>
+        </fieldset>
+
+        <!-- Caixa de texto -->
+        <div class="campo">
+            <br>
+            <label for="experiencia"><strong>Conte um pouco mais da sua experiência: </strong></label>
+            <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+        </div>
+
+        <!-- Botão para enviar o formulário -->
+        <button class="botao" type="submit" onsubmit="">Concluído</button>            
+
+    </form>
+
+</body>
+</html>
